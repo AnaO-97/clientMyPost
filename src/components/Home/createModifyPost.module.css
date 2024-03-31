@@ -1,0 +1,86 @@
+.formCreatePost{
+    width: 24.5%;
+    height: 85%;
+    position: fixed;
+    left: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* border: solid 1px green; */
+}
+
+.formCreatePost .createdAt{
+    padding-top: 15%;
+    color: black;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    margin-left: 110%;
+    /* border: solid 2px red; */
+}
+
+.formCreatePost .title{
+    border: none;
+    border-bottom: solid 2px gray;
+    margin-bottom: -15%;
+}
+
+.formCreatePost .content{
+    border: solid 2px gray;
+}
+
+.formCreatePost .title, .content{
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    /* border: solid 1px pink */
+}
+
+.formCreatePost .submitContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* border: solid 2px green */
+}
+
+.formCreatePost .submitContainer .btnYes{
+    position: fixed;
+    bottom: 7%;
+    right: 18%;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: transparent;
+}
+
+.btnNo{
+    position: fixed;
+    bottom: 7%;
+    right: 3%;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: transparent;
+}
+
+.btnNo:hover{
+    background-color: rgba(163, 30, 30, 0.589);    
+    box-shadow: -8px 3px 68px 13px rgba(163, 30, 30, 0.589);
+    -moz-box-shadow: -8px 3px 68px 13px rgba(163, 30, 30, 0.589);
+    -webkit-box-shadow: -8px 3px 68px 13px rgba(163, 30, 30, 0.589);
+}
+
+.formCreatePost .submitContainer .btnYes:hover{ 
+    background-color: rgba(25, 102, 25, 0.589);
+    box-shadow: -8px 3px 68px 13px  rgba(25, 102, 25, 0.589);
+    -moz-box-shadow: -8px 3px 68px 13px  rgba(25, 102, 25, 0.589);
+    -webkit-box-shadow: -8px 3px 68px 13px  rgba(25, 102, 25, 0.589);
+
+}

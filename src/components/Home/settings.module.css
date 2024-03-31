@@ -1,0 +1,70 @@
+.formSettings{
+    width: 93%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid 2px green; */
+}
+
+.formSettings .inputSetting{
+    width: 95%;
+    margin-bottom: 7%;
+    border: none;
+    border-radius: 10px;
+}
+
+.formSettings label{
+    width: 95%;
+    margin-bottom: 1%;
+    font-style: italic;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.692);
+    /* border: solid 2px red; */
+}
+
+.formSettings .inputColor{
+    width: 95%;
+}
+
+.formSettings .btnYes{
+    position: fixed;
+    bottom: 7%;
+    right: 18%;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: transparent;
+}
+
+.btnNo{
+    position: fixed;
+    bottom: 7%;
+    right: 3%;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: transparent;
+}
+
+.btnNo:hover{
+    background-color: rgba(163, 30, 30, 0.589);    
+    box-shadow: -8px 3px 68px 13px rgba(163, 30, 30, 0.589);
+    -moz-box-shadow: -8px 3px 68px 13px rgba(163, 30, 30, 0.589);
+    -webkit-box-shadow: -8px 3px 68px 13px rgba(163, 30, 30, 0.589);
+}
+
+.formSettings .btnYes:hover{ 
+    background-color: rgba(25, 102, 25, 0.589);
+    box-shadow: -8px 3px 68px 13px  rgba(25, 102, 25, 0.589);
+    -moz-box-shadow: -8px 3px 68px 13px  rgba(25, 102, 25, 0.589);
+    -webkit-box-shadow: -8px 3px 68px 13px  rgba(25, 102, 25, 0.589);
+
+}

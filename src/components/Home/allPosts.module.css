@@ -1,0 +1,79 @@
+.allPostsContainer{
+    width: 100%;
+    height: 78%;
+    overflow-y: scroll;
+    /* border: solid 2px pink */
+}
+
+.allPostsContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+.allPostsContainer::-webkit-scrollbar-thumb {
+    background-color: gray;  
+    border-radius: 20px;      
+    border: 1px solid #3f3e3e;
+}
+
+.allPostsContainer h4 {
+    margin-top: 2%;
+    border-radius: 20px;      
+    padding-left: 2%;
+}
+
+.allPostsContainer .cardPost{
+    margin: 1%;
+    padding: 1%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px gray;
+    background-color: rgba(218, 221, 63, 0.658);
+}
+
+.allPostsContainer .cardPost .headCard, .footerCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.allPostsContainer .cardPost .headCard .settings{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;   
+    border-radius: 10px; 
+    /* border: solid 2px yellow */
+}
+
+.allPostsContainer .cardPost .headCard h3{
+    width: 70%;
+    font-weight: bold;
+    text-align: center;
+    /* border: solid 2px pink */
+}
+
+.allPostsContainer .cardPost .footerCard .author{
+    width: 80%;
+    margin-top: 1%;
+    margin-left: 1%;
+    font-style: italic;
+    font-weight: bold;
+    /* border: solid 2px pink */
+}
+
+.allPostsContainer .cardPost .footerCard .likes{
+    width: 5%;
+    margin-top: 1%;
+    margin-left: 20%;
+    text-align: right;
+    font-weight: bold;
+    /* border: solid 2px pink */
+}
+
+.allPostsContainer .cardPost .bttnCard{
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+}
