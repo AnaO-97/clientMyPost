@@ -11,7 +11,7 @@ function Navbar ( props ) {
 
     const handleOutput = () => {
         dispatch(clearRedux());
-        navigate("/landing");
+        navigate("/");
     }
 
     const handleSettings = () => {

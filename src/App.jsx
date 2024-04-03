@@ -8,15 +8,15 @@ function App() {
   const userData   = useSelector(( state )=> state.userData);
 
   return (
-    <div className = { pathname !== "/landing" ? "App" : "Landing" }>
+    <div className = { pathname !== "/" ? "App" : "Landing" }>
       {
-        pathname !== "/landing"
+        pathname !== "/"
         ? <Navbar userData = { userData }/>
         : null
       }
 
       <Routes>
-        <Route exact path = "/landing"
+        <Route exact path = "/"
                element    = { <Landing/> } 
         > </Route>
 
