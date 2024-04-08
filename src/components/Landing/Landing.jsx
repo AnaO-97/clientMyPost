@@ -14,7 +14,7 @@ function Landing () {
     const [typeSession, setTypeSession] = useState("login");
     const [userData, setUserData]       = useState({
         fullName : "",
-        age      : 0,
+        age      : "",
         email    : "",
         color    : "#808080",
         plainPassword: "",

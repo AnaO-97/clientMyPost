@@ -6,44 +6,74 @@ function Register ( props ){
             <h1> REGISTER </h1>
 
             <form onSubmit = { handleSubmit }>
-                <input name = "fullName"
-                       type = "text"
-                       placeholder  = "Full name..."
-                       autoComplete = "off"
-                       value        = { userData.fullName }
-                       onChange     = { handleChange }
-                />
-
-                <input name = "age"
-                       type = "text"
-                       placeholder  = "Age..."
-                       autoComplete = "off"
-                       value        = { userData.age }
-                       onChange     = { handleChange }
-                />
-
-                <input name = "email"
-                       type = "text"
-                       autoFocus
-                       placeholder  = "E-mail..."
-                       autoComplete = "off"
-                       value        = { userData.email }
-                       onChange     = { handleChange }
-                />
+                <div className = { styles.inputBox }>
+                    <input name = "fullName"
+                        autoFocus
+                        type         = "text"                        
+                        autoComplete = "off"
+                        value        = { userData.fullName }
+                        onChange     = { handleChange }
+                        required
+                    />
+                    <label htmlFor = "fullName">Full name</label>
+                    <span className = "material-symbols-outlined">
+                        person
+                    </span>
+                </div>
                 
-                <input name = "plainPassword"
-                       type = "text"
-                       placeholder  = "Password..."
-                       autoComplete = "off"
-                       value        = { userData.plainPassword }
-                       onChange     = { handleChange }
-                />
-
-                <input name = "color"
-                       type = "color"
-                       value        = { userData.color || "#808080" }
-                       onChange     = { handleChange }
-                />
+                <div className = { styles.inputBox }>
+                    <input name = "age"
+                        type         = "text"                        
+                        autoComplete = "off"
+                        value        = { userData.age }
+                        onChange     = { handleChange }
+                        required
+                    />
+                    <label htmlFor = "age">Age</label>
+                    <span className = "material-symbols-outlined">
+                        date_range
+                    </span>                    
+                </div>
+                
+                <div className = { styles.inputBox }>
+                    <input name = "email"
+                        type         = "text"                                                
+                        autoComplete = "off"
+                        value        = { userData.email }
+                        onChange     = { handleChange }
+                        required
+                    />
+                    <label htmlFor = "email">E-mail</label>
+                    <span className="material-symbols-outlined">
+                        mail    
+                    </span>
+                </div>
+                
+                <div className = { styles.inputBox }>
+                    <input name = "plainPassword"
+                        type         = "text"                        
+                        autoComplete = "off"
+                        value        = { userData.plainPassword }
+                        onChange     = { handleChange }
+                        required
+                    />
+                    <label htmlFor = "plainPassword">Password</label>
+                    <span className="material-symbols-outlined">
+                        lock
+                    </span>
+                </div>
+                
+                <div className = { styles.inputBox }>
+                    <input name = "color"
+                        type         = "color"
+                        value        = { userData.color || "#808080" }
+                        onChange     = { handleChange }
+                    /> 
+                    <label htmlFor = "color">Color theme</label>
+                    <span className = "material-symbols-outlined">
+                        palette
+                    </span>
+                </div>
 
                 <button className = "btn btn-success" type = "submit">
                     REGISTER

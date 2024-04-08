@@ -6,22 +6,33 @@ function Login ( props ){
             <h1> LOG IN </h1>
 
             <form onSubmit = { handleSubmit }>
-                <input name = "email"
-                       type = "text"
-                       autoFocus
-                       placeholder  = "E-mail..."
+                <div className = { styles.inputBox }>
+                    <input name = "email"
+                       autoFocus                       
+                       required
+                       type         = "email"
                        autoComplete = "off"
                        value        = { userData.email }
                        onChange     = { handleChange }
-                />
-                
-                <input name = "plainPassword"
-                       type = "password"
-                       placeholder  = "Password..."
+                    />
+                    <label htmlFor = "email">E-mail</label>
+                    <span className = "material-symbols-outlined">
+                        mail    
+                    </span>
+                </div>
+                <div className = { styles.inputBox }>
+                    <input name = "plainPassword"
+                       required
+                       type         = "password"                       
                        autoComplete = "off"
                        value        = { userData.plainPassword }
                        onChange     = { handleChange }
-                />
+                    />
+                    <label htmlFor = "password">Password</label>
+                    <span className = "material-symbols-outlined">
+                        lock
+                    </span>
+                </div>  
                 
                 <button className = "btn btn-success" type = "submit">
                     LOG IN

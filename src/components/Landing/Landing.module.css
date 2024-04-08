@@ -46,13 +46,39 @@
     align-items: center;
 }
 
-.generalContainer .subContainer form input{
-    width: 50%;
-    margin: 10px;
+.generalContainer .subContainer form .inputBox{
+    position: relative;
+    margin: 10px 0;
+    width: 310px;
+    display: flex;
+    align-items: center;    
+}
+
+.generalContainer .subContainer form .inputBox input{
+    width: 85%;
+    margin: 7px;
     border-radius: 5px ;
 }
 
+.generalContainer .subContainer form .inputBox label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.generalContainer .subContainer form .inputBox input:focus ~ label,
+.generalContainer .subContainer form .inputBox input:valid ~ label{
+    top: -5px;
+}
+
 .generalContainer .subContainer form button{
+    width: 40%;
     margin-top: 10px;
-    margin-left: 39%;
+    margin-left: -4%;
+    border-bottom: solid 1px black;
 }
