@@ -143,12 +143,25 @@ export default function reducerPost ( state, type, payload ) {
 
     if ( type === ACTION.MODIFY_POST ){
         const { idBefore, postAfter } = payload;
-  
+ 
+        let postUpdatedFavs = [];
+        let postUpdatedIdFavs = [];
         let postUpdated = state.filterPosts.data.filter(( post )=> post.id === idBefore );
         let withoutPostUpdated = state.filterPosts.data.filter(( post )=> post.id !== idBefore );
         let withoutPostUpdatedAll = state.allPosts.filter(( post )=> post.id !== idBefore );
-        let withoutPostUpdatedFavs = state.myFavorites.data.filter(( post )=> post.id !== idBefore );
-        let withoutPostUpdatedIdFavs = state.myFavorites.idPosts.filter(( idPost )=> idPost !== idBefore );
+        
+        if( state.myFavorites.idPosts.includes( idBefore ) ){
+            postUpdatedFavs = state.myFavorites.data.filter(( post )=> post.id !== idBefore );
+            postUpdatedIdFavs = state.myFavorites.idPosts.filter(( idPost )=> idPost !== idBefore );
+
+            postUpdatedFavs = [ postAfter, ...postUpdatedFavs ];
+            postUpdatedIdFavs = [ postAfter.id,  ...postUpdatedIdFavs ];
+        }
+        else{
+            postUpdatedFavs = [ ...state.myFavorites.data ]
+            postUpdatedIdFavs = [ ...state.myFavorites.idPosts ]
+        }
+
         
         postUpdated = { ...postAfter };
         
@@ -160,8 +173,8 @@ export default function reducerPost ( state, type, payload ) {
                 data : [ postUpdated, ...withoutPostUpdated ],
             },
             myFavorites : {
-                data   : [ postUpdated, ...withoutPostUpdatedFavs ],
-                idPosts : [ postUpdated.id,  ...withoutPostUpdatedIdFavs ],
+                data    : [ ...postUpdatedFavs ],
+                idPosts : [ ...postUpdatedIdFavs ],
             }
         })
     }
